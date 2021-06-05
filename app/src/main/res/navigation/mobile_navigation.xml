@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_actualizar">
+
+    <fragment
+        android:id="@+id/nav_actualizar"
+        android:name="com.cubidevs.misdeudoresapp.ui.actualizar.ActualizarFragment"
+        android:label="@string/actualizar"
+        tools:layout="@layout/fragment_actualizar" />
+    <fragment
+        android:id="@+id/nav_borrar"
+        android:name="com.cubidevs.misdeudoresapp.ui.borrar.BorrarFragment"
+        android:label="@string/borrar"
+        tools:layout="@layout/fragment_borrar" />
+    <fragment
+        android:id="@+id/nav_buscar"
+        android:name="com.cubidevs.misdeudoresapp.ui.buscar.BuscarFragment"
+        android:label="@string/buscar"
+        tools:layout="@layout/fragment_buscar" />
+    <fragment
+        android:id="@+id/nav_crear"
+        android:name="com.cubidevs.misdeudoresapp.ui.crear.CrearFragment"
+        android:label="@string/crear"
+        tools:layout="@layout/fragment_crear" />
+    <fragment
+        android:id="@+id/nav_lista"
+        android:name="com.cubidevs.misdeudoresapp.ui.lista.ListaFragment"
+        android:label="@string/lista"
+        tools:layout="@layout/fragment_lista">
+    </fragment>
+</navigation>

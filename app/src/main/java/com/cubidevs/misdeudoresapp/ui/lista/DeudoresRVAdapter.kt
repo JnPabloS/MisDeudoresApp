@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.cubidevs.misdeudoresapp.R
 import com.cubidevs.misdeudoresapp.data.local.entities.Deudor
@@ -14,16 +15,11 @@ class DeudoresRVAdapter (
     var deudoresList: ArrayList<Deudor>
 ) : RecyclerView.Adapter<DeudoresRVAdapter.DeudoresViewHolder>()  {
 
-    //private lateinit var binding : ItemDeudorBinding
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): DeudoresViewHolder {
         var itemView = LayoutInflater.from(context).inflate(R.layout.item_deudor, parent,false)
-
-        //binding = ItemDeudorBinding.inflate(LayoutInflater.from(context), parent, false)
-
         return DeudoresViewHolder(itemView, context)
     }
 
@@ -34,7 +30,7 @@ class DeudoresRVAdapter (
         position: Int
     ) {
         val deudor: Deudor = deudoresList[position]
-        holder.bindDeudor(deudor) //, binding)
+        holder.bindDeudor(deudor)
     }
 
     class DeudoresViewHolder(
@@ -42,10 +38,16 @@ class DeudoresRVAdapter (
         context: Context
     ) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindDeudor(deudor: Deudor) //, bind: ItemDeudorBinding)
+        private val binding = ItemDeudorBinding.bind(itemView)
+
+        fun bindDeudor(deudor: Deudor)
         {
-            itemView.tvNombre.text = deudor.nombre
-            itemView.tvDeuda.text = deudor.valor.toString()
+            binding.tvNombre.text = deudor.nombre
+            binding.tvDeuda.text = deudor.valor.toString()
+
+            binding.tvNombre.setOnClickListener {
+                Toast.makeText(itemView.getContext(),deudor.nombre,Toast.LENGTH_LONG).show()
+            }
         }
 
     }

@@ -15,3 +15,7 @@ y
 Iapp/src/main/java/com/cubidevs/misdeudoresapp/ui/borrar/BorrarFragment.kt,9\9\992de854d3213d8ec0550d0f6797a2d6ff387e3b
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+u
+Eapp/src/main/java/com/cubidevs/misdeudoresapp/ui/main/MainActivity.kt,c\e\cee183d7569e2f6629346cea57dd6cdcf1f43f97
+o
+?app/src/main/java/com/cubidevs/misdeudoresapp/MisDeudoresApp.kt,7\d\7daa6967f735d3befc460128846ac05f1cc14dab
